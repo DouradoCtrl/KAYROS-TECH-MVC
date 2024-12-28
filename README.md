@@ -61,6 +61,17 @@ Certifique-se que o baseURL de sua aplicação esteja correto, caso contrário h
 ### Iniciando a aplicação
 Execute o comando `php spark serve`, esse comando realizará uma abertura de porta individual em seu localhost e possibilitará visualizar o projeto.
 
+Crie o banco de dados e as tabelas necessárias para a execução da aplicação.
+Siga o documento presente no diretório `sql/templateDatabase.sql` do projeto.
+
+**Importante ressaltar que será se extrema importânica criar um usuário `master` para que consiga instanciar o uso da aplicação. Siga o exemplo abaixo:**
+```sql
+    INSERT INTO users (username, password, is_master) VALUES ('user_master', 'password', 1);
+```
+
+## Previews
+-- fotos e tananã
+
 
 ## Mudança Importante no index.php
 
