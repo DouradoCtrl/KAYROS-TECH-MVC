@@ -70,7 +70,18 @@ Siga o documento presente no diretório `sql/templateDatabase.sql` do projeto.
 ```
 
 ## Previews
--- fotos e tananã
+### Login
+![Login](previews/login.png)
+
+![Login_master](previews/login_master.png)
+
+#### Crud
+
+![Register](previews/user_register.png)
+
+![Get](previews/crud_cto_clear.png)
+
+![Insert](previews/add_cto_clear.png)
 
 
 ## Mudança Importante no index.php
