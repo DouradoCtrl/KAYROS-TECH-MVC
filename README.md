@@ -1,4 +1,4 @@
-# Início do Projeto CodeIgniter 4
+# KAYROS-TECH-MVC
 
 ## O que é o CodeIgniter?
 
@@ -20,7 +20,47 @@ Ao atualizar, verifique as notas de lançamento para ver se há mudanças que vo
 
 ## Configuração
 
-Copie o arquivo `env` para `.env` e personalize conforme sua aplicação, especialmente a baseURL e as configurações do banco de dados.
+Crie o arquivo `.env` e personalize conforme sua aplicação, especialmente a baseURL e as configurações do banco de dados.
+```bash
+    CI_ENVIRONMENT = development
+    database.default.hostname = localhost
+    database.default.database = nome_do_banco
+    database.default.username = usuario
+    database.default.password = senha
+``` 
+
+
+Exemplo de configuração para CodeIgniter 4 (em app/config/Database.php):
+```php
+    public $default = [
+    'hostname' => 'localhost',
+    'username' => 'seu_usuario', // Substitua pelo nome do novo usuário
+    'password' => 'sua_senha', // Substitua pela senha do novo usuário
+    'database' => 'nome_do_banco', // Substitua pelo nome do banco de dados
+    'DBDriver' => 'MySQLi',
+    'DBPrefix' => '',
+    'pConnect' => false,
+    'DBDebug' => (ENVIRONMENT !== 'production'),
+    'cacheOn' => false,
+    'encrypt' => false,
+    'compress' => false,
+    'stricton' => false,
+    'failover' => [],
+    'save_queries' => true
+];
+```
+
+Certifique-se que o baseURL de sua aplicação esteja correto, caso contrário haverá problema de redirecionamento no momento que iniciar a aplicação.
+
+```php
+    app/config/app.php
+    public string $baseURL = 'http://localhost:8080/';
+
+```
+
+### Iniciando a aplicação
+Execute o comando `php spark serve`, esse comando realizará uma abertura de porta individual em seu localhost e possibilitará visualizar o projeto.
+
 
 ## Mudança Importante no index.php
 
