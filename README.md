@@ -1,68 +1,58 @@
-# CodeIgniter 4 Application Starter
+# Início do Projeto CodeIgniter 4
 
-## What is CodeIgniter?
+## O que é o CodeIgniter?
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+O CodeIgniter é um framework PHP full-stack que é leve, rápido, flexível e seguro.  
+Mais informações podem ser encontradas no [site oficial](https://codeigniter.com).
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Este repositório contém um iniciador de aplicativo que pode ser instalado com o **composer**.  
+Ele foi criado a partir do [repositório de desenvolvimento](https://github.com/codeigniter4/CodeIgniter4).
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+Mais informações sobre os planos para a versão 4 podem ser encontradas em [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) nos fóruns.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+Você pode ler o [manual do usuário](https://codeigniter.com/user_guide/) correspondente à versão mais recente do framework.
 
-## Installation & updates
+## Instalação e Atualizações
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+Execute `composer create-project codeigniter4/appstarter` e depois `composer update` sempre que houver uma nova versão do framework.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+Ao atualizar, verifique as notas de lançamento para ver se há mudanças que você precisa aplicar na pasta `app`. Os arquivos afetados podem ser copiados ou mesclados de `vendor/codeigniter4/framework/app`.
 
-## Setup
+## Configuração
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+Copie o arquivo `env` para `.env` e personalize conforme sua aplicação, especialmente a baseURL e as configurações do banco de dados.
 
-## Important Change with index.php
+## Mudança Importante no index.php
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+O arquivo `index.php` não está mais na raiz do projeto! Ele foi movido para a pasta *public*, para maior segurança e separação dos componentes.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+Isso significa que você deve configurar seu servidor web para "apontar" para a pasta *public* do seu projeto, e **não** para a raiz do projeto. Uma prática melhor seria configurar um host virtual para apontar para lá. Uma prática ruim seria apontar seu servidor web para a raiz do projeto e esperar acessar via *public/...*, pois o restante da lógica e o framework estarão expostos.
 
-**Please** read the user guide for a better explanation of how CI4 works!
+**Por favor**, leia o manual do usuário para uma explicação melhor de como o CI4 funciona!
 
-## Repository Management
+## Gerenciamento de Repositório
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+Usamos os **issues** do GitHub no nosso repositório principal para acompanhar **ERROS** e os pacotes de trabalho **DEVELOPMENT** aprovados.  
+Usamos o nosso [fórum](http://forum.codeigniter.com) para fornecer **SUPORTE** e discutir **REQUISIÇÕES DE FUNCIONALIDADES**.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+Este repositório é um repositório "de distribuição", criado pelo nosso script de preparação de lançamentos.  
+Problemas com ele podem ser reportados no nosso fórum ou como **issues** no repositório principal.
 
-## Server Requirements
+## Requisitos do Servidor
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+É necessário PHP na versão 8.1 ou superior, com as seguintes extensões instaladas:
 
 - [intl](http://php.net/manual/en/intl.requirements.php)
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+> [!AVISO]
+> - A data de fim de vida do PHP 7.4 foi em 28 de novembro de 2022.
+> - A data de fim de vida do PHP 8.0 foi em 26 de novembro de 2023.
+> - Se você ainda estiver usando o PHP 7.4 ou 8.0, deve atualizar imediatamente.
+> - A data de fim de vida do PHP 8.1 será em 31 de dezembro de 2025.
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+Além disso, verifique se as seguintes extensões estão habilitadas no seu PHP:
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+- json (habilitado por padrão - não desative)
+- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) caso você planeje usar MySQL
+- [libcurl](http://php.net/manual/en/curl.requirements.php) caso planeje usar a biblioteca HTTP\CURLRequest
